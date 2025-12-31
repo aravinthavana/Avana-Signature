@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             social: {
                 instagram: 'https://www.instagram.com/avanamedical',
                 facebook: 'https://www.facebook.com/AvanaMedical',
-                x: 'https://x.com/AvanaPvt/',
+                x: 'https://x.com/AvanaMedical',
                 linkedin: 'https://www.linkedin.com/company/avana-medical/',
                 youtube: 'https://www.youtube.com/@avanamedical'
             }
@@ -53,8 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 facebook: 'https://www.facebook.com/avanasurgical/',
                 instagram: 'https://www.instagram.com/avana_surgical/',
                 linkedin: 'https://www.linkedin.com/company/avana-surgical-systems-pvt-ltd/',
-                youtube: 'https://www.youtube.com/@avanamedical',
-                x: 'https://x.com/AvanaPvt/'
+                youtube: 'https://www.youtube.com/@joint_arogyam'
             }
         },
         'ats': {
