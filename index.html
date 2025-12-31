@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avana Signature Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Avana Signature Generator</h1>
+            <p>Enter your details below to generate your official email signature.</p>
+        </header>
+
+        <main>
+            <div class="form-section">
+                <form id="signatureForm">
+                    <div class="form-group">
+                        <label for="signoffSelect">Sign-off</label>
+                        <select id="signoffSelect">
+                            <option value="Thanks & Regards,">Thanks & Regards,</option>
+                            <option value="Best Regards,">Best Regards,</option>
+                            <option value="custom">Custom...</option>
+                        </select>
+                        <input type="text" id="signoffCustom" placeholder="Enter custom sign-off"
+                            style="display: none; margin-top: 10px;">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Full Name <span class="required" style="color: red;">*</span></label>
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="designation">Designation <span class="required" style="color: red;">*</span></label>
+                        <input type="text" id="designation" placeholder="Designation" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="text" id="mobile" placeholder="e.g. +91 98765 43210">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <select id="company" required>
+                            <option value="amd">Avana Medical Devices Pvt Ltd</option>
+                            <option value="assp">Avana Surgical Systems Pvt Ltd</option>
+                            <option value="ats">Avana Technology Services Pvt Ltd</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="branch">Branch / Location</label>
+                        <select id="branch" required>
+                            <option value="chennai">Chennai (HQ)</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="bengaluru">Bengaluru</option>
+                            <option value="logistics">Logistics (Chennai)</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+
+            <div class="preview-section">
+                <div class="preview-header">
+                    <h2>Signature Preview</h2>
+                    <button id="copyBtn" class="primary-btn">Copy Signature</button>
+                </div>
+
+                <div class="signature-container" id="signaturePreview">
+                    <!-- Signature HTML starts here -->
+                    <table cellpadding="0" cellspacing="0" border="0"
+                        style="font-family: 'Outfit', sans-serif, Arial; font-size: 14px; color: #333; line-height: 1.4;">
+                        <!-- Section 1: Name & Designation -->
+                        <tr>
+                            <td style="padding-bottom: 10px;">
+                                <div style="font-size: 14px; color: #333; margin-bottom: 4px;" id="previewSignoff">
+                                    Thanks & Regards,</div>
+                                <div style="font-size: 18px; font-weight: 700; color: #000; margin-bottom: 2px;"
+                                    id="previewName">Your Name</div>
+                                <div style="font-size: 14px; color: #555;" id="previewDesignation">Your Designation
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Section 2: Avana Logo -->
+                        <tr>
+                            <td style="padding-bottom: 15px;">
+                                <img src="images/Avana-logo-black.png" alt="Avana" width="102" height="39"
+                                    style="display: block; width: 102px; height: 39px;">
+                            </td>
+                        </tr>
+
+                        <!-- Section 3: GPTW & Details -->
+                        <tr>
+                            <td>
+                                <table cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                        <!-- Left Column: GPTW Logo -->
+                                        <td
+                                            style="vertical-align: top; padding-right: 20px; border-right: 2px solid #000;">
+                                            <div>
+                                                <img src="images/gptw-min.jpg" alt="Great Place To Work" width="89"
+                                                    style="display: block; width: 89px; height: auto;">
+                                            </div>
+                                        </td>
+
+                                        <!-- Right Column: Details -->
+                                        <td style="vertical-align: top; padding-left: 20px;">
+                                            <div style="font-size: 16px; font-weight: 700; color: #000; margin-bottom: 5px;"
+                                                id="previewCompany">Avana Medical Devices Pvt Ltd.,</div>
+                                            <div style="font-size: 13px; color: #333; margin-bottom: 5px; max-width: 400px;"
+                                                id="previewAddress">
+                                                No.91, Sundar Nagar 4th Avenue, Nandambakkam, Chennai – 600032, Tamil
+                                                Nadu, India
+                                            </div>
+                                            <div style="font-size: 13px; color: #333; margin-bottom: 5px;">
+                                                Website : <a href="http://www.avanamedical.com" id="previewWebsite"
+                                                    style="color: #0000FF; text-decoration: underline;">www.avanamedical.com</a>
+                                            </div>
+                                            <div id="previewMobileContainer"
+                                                style="font-size: 14px; font-weight: 700; color: #000; margin-bottom: 10px;">
+                                                Mobile : <a href="tel:+919629164213" id="previewMobileLink"
+                                                    style="color: #0000FF; text-decoration: underline;">+91
+                                                    9629164213</a>
+                                            </div>
+
+                                            <!-- Social Icons -->
+                                            <div style="margin-top: 8px;">
+                                                <a href="#" id="linkFacebook"
+                                                    style="text-decoration: none; margin-right: 5px; display: inline-block;"><img
+                                                        src="images/social/facebook.png" alt="FB" width="20" height="20"
+                                                        style="height: 20px; width: 20px;"></a>
+                                                <a href="#" id="linkLinkedin"
+                                                    style="text-decoration: none; margin-right: 5px; display: inline-block;"><img
+                                                        src="images/social/linkedin.png" alt="IN" width="20" height="20"
+                                                        style="height: 20px; width: 20px;"></a>
+                                                <a href="#" id="linkInstagram"
+                                                    style="text-decoration: none; margin-right: 5px; display: inline-block;"><img
+                                                        src="images/social/instagram.png" alt="IG" width="20"
+                                                        height="20" style="height: 20px; width: 20px;"></a>
+                                                <a href="#" id="linkYoutube"
+                                                    style="text-decoration: none; margin-right: 5px; display: inline-block;"><img
+                                                        src="images/social/youtube.png" alt="YT" width="20" height="20"
+                                                        style="height: 20px; width: 20px;"></a>
+                                                <a href="#" id="linkX"
+                                                    style="text-decoration: none; margin-right: 5px; display: inline-block;"><img
+                                                        src="images/social/x.png" alt="X" width="20" height="20"
+                                                        style="height: 20px; width: 20px;"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- Signature HTML ends here -->
+                </div>
+                <div id="copyStatus" class="status-msg"></div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
