@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Copy Functionality
     copyBtn.addEventListener('click', () => {
         const signatureRange = document.createRange();
-        signatureRange.selectNode(document.getElementById('signaturePreview'));
+        signatureRange.selectNodeContents(document.getElementById('signaturePreview'));
         window.getSelection().removeAllRanges();
         window.getSelection().addRange(signatureRange);
 
