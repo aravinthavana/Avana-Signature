@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Data - Branches
     const branches = {
-        'chennai': 'No.91, Sundar Nagar 4th Avenue, Nandambakkam, Chennai – 600032, Tamil Nadu, India',
+        'chennai': 'No.91, Sundar Nagar 4th Avenue, Nandambakkam,<br>Chennai – 600032, Tamil Nadu, India',
         'mumbai': 'The Summit Business Bay (Omkar) Office No. 606, 6th Floor, Andheri Kurla Road, Chakala, Andheri East, Mumbai – 400093',
         'delhi': 'Avana Medical Devices Pvt Ltd B6, Qutab Institutional Area New Delhi, Delhi – 110016',
         'bengaluru': 'No.52, 3rd Floor, Agastya Arcade, 80 feet Road, New BEL Rd, Devasandra Layout, Bengaluru – 560094, Karnataka, India',
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Branch
         const selectedBranchAddress = branches[branchSelect.value];
         if (selectedBranchAddress) {
-            previewAddress.textContent = selectedBranchAddress;
+            previewAddress.innerHTML = selectedBranchAddress;
         }
 
         validateForm();
