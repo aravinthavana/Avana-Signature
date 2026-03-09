@@ -72,10 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Data - Branches
     const branches = {
-        'chennai': 'No.91, Sundar Nagar 4th Avenue, Nandambakkam,<br>Chennai – 600032, Tamil Nadu, India',
-        'mumbai': 'The Summit Business Bay (Omkar) Office No. 606, 6th Floor, Andheri Kurla Road, Chakala, Andheri East, Mumbai – 400093',
-        'delhi': 'Avana Medical Devices Pvt Ltd B6, Qutab Institutional Area New Delhi, Delhi – 110016',
-        'bengaluru': 'No.52, 3rd Floor, Agastya Arcade, 80 feet Road, New BEL Rd, Devasandra Layout, Bengaluru – 560094, Karnataka, India',
+        'chennai': 'No.91, Sundar Nagar 4th Avenue, Nandambakkam,<br>Chennai – 600032, Tamil Nadu, India<br>Landline : <a href="tel:+914422331061" style="color: #0000FF; text-decoration: underline;">+91 44 2233 1061</a>/<a href="tel:+914422331062" style="color: #0000FF; text-decoration: underline;">1062</a>/<a href="tel:+914422331063" style="color: #0000FF; text-decoration: underline;">1063</a>',
+        'mumbai': 'The Summit Business Bay (Omkar) Office No. 606, 6th Floor, Andheri Kurla Road, Chakala, Andheri East, Mumbai – 400093<br>Landline : <a href="tel:+912249700628" style="color: #0000FF; text-decoration: underline;">+91 22 49700628</a>',
+        'delhi': 'Avana Medical Devices Pvt Ltd B6, Qutab Institutional Area New Delhi, Delhi – 110016<br>Landline : <a href="tel:+911141538222" style="color: #0000FF; text-decoration: underline;">+91 11 4153 8222</a>',
+        'bengaluru': 'No.52, 3rd Floor, Agastya Arcade, 80 feet Road, New BEL Rd, Devasandra Layout, Bengaluru – 560094, Karnataka, India<br>Landline : <a href="tel:+918023512259" style="color: #0000FF; text-decoration: underline;">+91 8023512259</a>',
         'logistics': '3/249F, 3/249G, Krishna Enclave, Parthasarathy Nagar, Manapakkam, Chennai – 600125, Tamil Nadu, India'
     };
 
